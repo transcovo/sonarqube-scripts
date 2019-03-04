@@ -47,6 +47,7 @@ fi
 # Sonar scanner execution
 $SONAR_SCANNER_PATH \
   -Dsonar.login="$SONAR_TOKEN" \
+  -Dsonar.host.url="${SONAR_URL:-https://sonarqube-platform.internal.chpr.fr}" \
   -Dproject.settings=./sonar-project.properties \
   -Dsonar.javascript.lcov.reportPaths="${SONAR_LCOV_PATH:-coverage/lcov.info}" \
   -Dsonar.projectDescription="$DESCRIPTION" \
